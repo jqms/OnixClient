@@ -7,19 +7,12 @@ html, body {
     font-size: 20px;
     padding: 10px;
 }
-.mainDownloadButton {
-  font-size: 40px;
-  justify-content: center;
-  text-align: center;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  text-decoration: none;
-  background: #4a4a4a2e;
-  border-radius: 60px;
-  color: #ffffff;
-  font-family: "Poppins", sand-serif;
+
+.grow {
+  transition: all .2s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.1);
 }
 
 .navbar {
@@ -101,14 +94,6 @@ html, body {
  float: left;
 }
 
-.name{
-    float: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-
-}
-
 .centerdiv {
     text-align: center;
     animation: TransitionIn 1s;
@@ -156,16 +141,83 @@ footer {
   border-radius: 30px;
   justify-content: center;
   align-items: center;
-  outline: 4px solid #111111;
+  background: linear-gradient(-45deg, #0098fa, #00c4fb) border-box;
+  border: 5px solid transparent;
+  border-radius: 50px;
+  transition: all .4s ease-in-out;
+  background-size: 200% 200%;
+  animation: gradient 1s linear infinite;
+  float: center;
 }
-.overlapB{
+
+.overlapB {
   position: relative;
   top: -100px;
   left: 200px;
   border-radius: 30px;
   justify-content: center;
-  outline: 4px solid #111111;
+  align-items: center;
+  background: linear-gradient(45deg, #0098fa, #00c4fb) border-box;
+  border: 5px solid transparent;
+  border-radius: 50px;
+  transition: all .4s ease-in-out;
+  background-size: 200% 200%;
+  animation: gradient 1s linear infinite;
+  float: center;
 }
+
+.overlapC {
+  position: relative;
+  top: -520px;
+  left: -53px;
+  transition: all .4s ease-in-out;
+  animation: gradient 1s linear infinite;
+  float: center;
+}
+
+.overlapA:hover {
+  transform: scale(1.05);
+  rotate: -2deg;
+}
+
+.overlapB:hover {
+  transform: scale(1.05);
+  rotate: 2deg;
+}
+
+.overlapC:hover {
+  transform: scale(1.05);
+  transition: 1s ease-in-out;
+  rotate: -360deg;
+}
+
+.name {
+  float: right;
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.logothing {
+  transition: all .5s ease-in-out;
+  float: inline-start;
+}
+
+.logothing:hover {
+  transform: scale(1.1);
+}
+
+.download {
+  transition: all .2s ease-in-out;
+  float: center;
+  padding: 40px;
+  border-radius: 40px;
+}
+
+.download:hover {
+  transform: scale(1.1);
+}
+
 hr {
   border: 1px solid rgb(100, 100, 100);
 }
@@ -182,11 +234,61 @@ hr {
 }
 
 @keyframes TextAnimation {
+  0% {
+    color: #0e66ba;
+  }
+  100% {
+    color: #83daff;
+  }
   from {
-    opacity: 0;
+    opacity: 0.5;
   }
   
   to {
     opacity: 1;
   }
+}
+@keyframes EnlargeText {
+  0% {
+    font-size: 40px;
+  }
+  100% {
+    font-size: 50px;
+  }
+}
+
+.chroma {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  transition: all 1s ease-in-out;
+  float: center;
+  padding: 30px;
+  border-radius: 20px;;
+}
+
+.chroma:hover {
+  transform: scale(1.15);
+  rotate: 360deg;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
